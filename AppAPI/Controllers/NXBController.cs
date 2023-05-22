@@ -13,8 +13,8 @@ namespace AppAPI.Controllers
         private IAllRepositories<Nxb> irepos;
         private QUAN_LI_SACH_NET105Context context =
             new QUAN_LI_SACH_NET105Context();
-        
-        
+
+
         public NXBController()
         {
             AllRepositories<Nxb> repos =

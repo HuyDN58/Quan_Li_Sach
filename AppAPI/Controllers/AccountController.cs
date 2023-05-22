@@ -13,10 +13,10 @@ namespace AppAPI.Controllers
     public class AccountController : ControllerBase
     {
         private IAllRepositories<Account> irepos;
-        private QUAN_LI_SACH_NET105Context context= new QUAN_LI_SACH_NET105Context();
+        private QUAN_LI_SACH_NET105Context context = new QUAN_LI_SACH_NET105Context();
         public AccountController()
         {
-            AllRepositories<Account> repos = new AllRepositories<Account>(context,context.Accounts);
+            AllRepositories<Account> repos = new AllRepositories<Account>(context, context.Accounts);
             irepos = repos;
         }
         [HttpGet]

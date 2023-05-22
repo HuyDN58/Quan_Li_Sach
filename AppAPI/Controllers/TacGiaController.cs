@@ -17,7 +17,7 @@ namespace AppAPI.Controllers
             AllRepositories<TacGium> repos = new AllRepositories<TacGium>(context, context.TacGia);
             irepos = repos;
         }
-        
+
         [HttpGet]
         public IEnumerable<TacGium> Get()
         {

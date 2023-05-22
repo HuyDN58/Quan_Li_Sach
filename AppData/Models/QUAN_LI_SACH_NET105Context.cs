@@ -34,7 +34,7 @@ namespace AppData.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LAPTOP-T7U3DOA6\\SQLEXPRESS;Initial Catalog=QUAN_LI_SACH_NET105;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=NGOCSINH;Initial Catalog=QUAN_LI_SACH_NET105;Integrated Security=True");
             }
         }
 
@@ -43,11 +43,11 @@ namespace AppData.Models
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.HasKey(e => e.IdnguoiDung)
-                    .HasName("PK__Account__FCD7DB093D400C14");
+                    .HasName("PK__Account__FCD7DB097A961C94");
 
                 entity.ToTable("Account");
 
-                entity.HasIndex(e => e.TaiKhoan, "UQ__Account__D5B8C7F0E0A1B408")
+                entity.HasIndex(e => e.TaiKhoan, "UQ__Account__D5B8C7F0938C33AA")
                     .IsUnique();
 
                 entity.Property(e => e.IdnguoiDung)
@@ -64,7 +64,7 @@ namespace AppData.Models
             modelBuilder.Entity<GioHang>(entity =>
             {
                 entity.HasKey(e => e.Idgh)
-                    .HasName("PK__GioHang__B87DE222A4164E20");
+                    .HasName("PK__GioHang__B87DE222D100450C");
 
                 entity.ToTable("GioHang");
 
@@ -77,13 +77,13 @@ namespace AppData.Models
                 entity.HasOne(d => d.IdkhNavigation)
                     .WithMany(p => p.GioHangs)
                     .HasForeignKey(d => d.Idkh)
-                    .HasConstraintName("FK__GioHang__IDKH__7E37BEF6");
+                    .HasConstraintName("FK__GioHang__IDKH__7F2BE32F");
             });
 
             modelBuilder.Entity<GioHangCt>(entity =>
             {
                 entity.HasKey(e => e.Idghct)
-                    .HasName("PK__GioHangC__D592581F997CD751");
+                    .HasName("PK__GioHangC__D592581F54369A12");
 
                 entity.ToTable("GioHangCT");
 
@@ -100,22 +100,22 @@ namespace AppData.Models
                 entity.HasOne(d => d.IdghNavigation)
                     .WithMany(p => p.GioHangCts)
                     .HasForeignKey(d => d.Idgh)
-                    .HasConstraintName("FK__GioHangCT__IDGH__7D439ABD");
+                    .HasConstraintName("FK__GioHangCT__IDGH__7E37BEF6");
 
                 entity.HasOne(d => d.IdspctNavigation)
                     .WithMany(p => p.GioHangCts)
                     .HasForeignKey(d => d.Idspct)
-                    .HasConstraintName("FK__GioHangCT__IDSPC__7C4F7684");
+                    .HasConstraintName("FK__GioHangCT__IDSPC__7D439ABD");
             });
 
             modelBuilder.Entity<HoaDon>(entity =>
             {
                 entity.HasKey(e => e.Idhd)
-                    .HasName("PK__HoaDon__B87C1A075C6A9693");
+                    .HasName("PK__HoaDon__B87C1A07599CB17A");
 
                 entity.ToTable("HoaDon");
 
-                entity.HasIndex(e => e.MaHd, "UQ__HoaDon__2725A6E1A69C7B4B")
+                entity.HasIndex(e => e.MaHd, "UQ__HoaDon__2725A6E11AE619B6")
                     .IsUnique();
 
                 entity.Property(e => e.Idhd)
@@ -140,27 +140,27 @@ namespace AppData.Models
                 entity.HasOne(d => d.IdkhNavigation)
                     .WithMany(p => p.HoaDons)
                     .HasForeignKey(d => d.Idkh)
-                    .HasConstraintName("FK__HoaDon__IDKH__787EE5A0");
+                    .HasConstraintName("FK__HoaDon__IDKH__797309D9");
 
                 entity.HasOne(d => d.IdkmNavigation)
                     .WithMany(p => p.HoaDons)
                     .HasForeignKey(d => d.Idkm)
-                    .HasConstraintName("FK__HoaDon__IDKM__7A672E12");
+                    .HasConstraintName("FK__HoaDon__IDKM__7B5B524B");
 
                 entity.HasOne(d => d.IdnvNavigation)
                     .WithMany(p => p.HoaDons)
                     .HasForeignKey(d => d.Idnv)
-                    .HasConstraintName("FK__HoaDon__IDNV__797309D9");
+                    .HasConstraintName("FK__HoaDon__IDNV__7A672E12");
             });
 
             modelBuilder.Entity<HoaDonCt>(entity =>
             {
                 entity.HasKey(e => e.Idhdct)
-                    .HasName("PK__HoaDonCT__F8B336770DD9C258");
+                    .HasName("PK__HoaDonCT__F8B33677718DB99B");
 
                 entity.ToTable("HoaDonCT");
 
-                entity.HasIndex(e => e.SoLuong, "UQ__HoaDonCT__556FA0673B1579D2")
+                entity.HasIndex(e => e.SoLuong, "UQ__HoaDonCT__556FA067A5B4F8EF")
                     .IsUnique();
 
                 entity.Property(e => e.Idhdct)
@@ -176,22 +176,22 @@ namespace AppData.Models
                 entity.HasOne(d => d.IdhdNavigation)
                     .WithMany(p => p.HoaDonCts)
                     .HasForeignKey(d => d.Idhd)
-                    .HasConstraintName("FK__HoaDonCT__IDHD__75A278F5");
+                    .HasConstraintName("FK__HoaDonCT__IDHD__76969D2E");
 
                 entity.HasOne(d => d.IdspctNavigation)
                     .WithMany(p => p.HoaDonCts)
                     .HasForeignKey(d => d.Idspct)
-                    .HasConstraintName("FK__HoaDonCT__IDSPCT__76969D2E");
+                    .HasConstraintName("FK__HoaDonCT__IDSPCT__778AC167");
             });
 
             modelBuilder.Entity<KhachHang>(entity =>
             {
                 entity.HasKey(e => e.Idkh)
-                    .HasName("PK__KhachHan__B87DC1A71B3F4C50");
+                    .HasName("PK__KhachHan__B87DC1A74AD4F6F2");
 
                 entity.ToTable("KhachHang");
 
-                entity.HasIndex(e => e.Ma, "UQ__KhachHan__3214CC9E2EA478EC")
+                entity.HasIndex(e => e.Ma, "UQ__KhachHan__3214CC9E87525964")
                     .IsUnique();
 
                 entity.Property(e => e.Idkh)
@@ -220,17 +220,17 @@ namespace AppData.Models
                 entity.HasOne(d => d.IdnguoiDungNavigation)
                     .WithMany(p => p.KhachHangs)
                     .HasForeignKey(d => d.IdnguoiDung)
-                    .HasConstraintName("FK__KhachHang__IDNgu__7B5B524B");
+                    .HasConstraintName("FK__KhachHang__IDNgu__7C4F7684");
             });
 
             modelBuilder.Entity<KhuyenMai>(entity =>
             {
                 entity.HasKey(e => e.Idkm)
-                    .HasName("PK__KhuyenMa__B87DC1AA5CC00F4D");
+                    .HasName("PK__KhuyenMa__B87DC1AAD1E6023E");
 
                 entity.ToTable("KhuyenMai");
 
-                entity.HasIndex(e => e.MaKm, "UQ__KhuyenMa__2725CF14E1D53921")
+                entity.HasIndex(e => e.MaKm, "UQ__KhuyenMa__2725CF1420F347DB")
                     .IsUnique();
 
                 entity.Property(e => e.Idkm)
@@ -256,11 +256,11 @@ namespace AppData.Models
             modelBuilder.Entity<NhanVien>(entity =>
             {
                 entity.HasKey(e => e.Idnv)
-                    .HasName("PK__NhanVien__B87DC9B21BF29A93");
+                    .HasName("PK__NhanVien__B87DC9B209D9DF83");
 
                 entity.ToTable("NhanVien");
 
-                entity.HasIndex(e => e.MaNv, "UQ__NhanVien__2725D70B024459F5")
+                entity.HasIndex(e => e.MaNv, "UQ__NhanVien__2725D70B6E95CB40")
                     .IsUnique();
 
                 entity.Property(e => e.Idnv)
@@ -290,17 +290,17 @@ namespace AppData.Models
                 entity.HasOne(d => d.IdnguoiDungNavigation)
                     .WithMany(p => p.NhanViens)
                     .HasForeignKey(d => d.IdnguoiDung)
-                    .HasConstraintName("FK__NhanVien__IDNguo__778AC167");
+                    .HasConstraintName("FK__NhanVien__IDNguo__787EE5A0");
             });
 
             modelBuilder.Entity<Nxb>(entity =>
             {
                 entity.HasKey(e => e.Idnxb)
-                    .HasName("PK__NXB__945B98FB12683C9C");
+                    .HasName("PK__NXB__945B98FB6E74D8C6");
 
                 entity.ToTable("NXB");
 
-                entity.HasIndex(e => e.Mansx, "UQ__NXB__7ABD278CE74A2624")
+                entity.HasIndex(e => e.Mansx, "UQ__NXB__7ABD278C2C5293DF")
                     .IsUnique();
 
                 entity.Property(e => e.Idnxb)
@@ -320,11 +320,11 @@ namespace AppData.Models
             modelBuilder.Entity<SanPham>(entity =>
             {
                 entity.HasKey(e => e.Idsp)
-                    .HasName("PK__SanPham__B87C02A51B3B9EE3");
+                    .HasName("PK__SanPham__B87C02A5E1DD8D57");
 
                 entity.ToTable("SanPham");
 
-                entity.HasIndex(e => e.MaSp, "UQ__SanPham__2725081DDDA9E9F1")
+                entity.HasIndex(e => e.MaSp, "UQ__SanPham__2725081DD7C2DF5F")
                     .IsUnique();
 
                 entity.Property(e => e.Idsp)
@@ -344,7 +344,7 @@ namespace AppData.Models
             modelBuilder.Entity<SanPhamCt>(entity =>
             {
                 entity.HasKey(e => e.Idspct)
-                    .HasName("PK__SanPhamC__83F7208FBB524A6E");
+                    .HasName("PK__SanPhamC__83F7208FA954EE61");
 
                 entity.ToTable("SanPhamCT");
 
@@ -373,25 +373,25 @@ namespace AppData.Models
                 entity.HasOne(d => d.IdnxbNavigation)
                     .WithMany(p => p.SanPhamCts)
                     .HasForeignKey(d => d.Idnxb)
-                    .HasConstraintName("FK__SanPhamCT__IDNXB__74AE54BC");
+                    .HasConstraintName("FK__SanPhamCT__IDNXB__75A278F5");
 
                 entity.HasOne(d => d.IdspNavigation)
                     .WithMany(p => p.SanPhamCts)
                     .HasForeignKey(d => d.Idsp)
-                    .HasConstraintName("FK__SanPhamCT__IDSP__72C60C4A");
+                    .HasConstraintName("FK__SanPhamCT__IDSP__73BA3083");
 
                 entity.HasOne(d => d.IdtgNavigation)
                     .WithMany(p => p.SanPhamCts)
                     .HasForeignKey(d => d.Idtg)
-                    .HasConstraintName("FK__SanPhamCT__IDTG__73BA3083");
+                    .HasConstraintName("FK__SanPhamCT__IDTG__74AE54BC");
             });
 
             modelBuilder.Entity<TacGium>(entity =>
             {
                 entity.HasKey(e => e.Idtg)
-                    .HasName("PK__TacGia__B87C3A8FD62BAD36");
+                    .HasName("PK__TacGia__B87C3A8F63E83118");
 
-                entity.HasIndex(e => e.Matg, "UQ__TacGia__6023721B028A7A59")
+                entity.HasIndex(e => e.Matg, "UQ__TacGia__6023721B761EEB4A")
                     .IsUnique();
 
                 entity.Property(e => e.Idtg)
