@@ -1,0 +1,47 @@
+﻿@model IEnumerable<AppData.Models.TacGium>
+
+@{
+    ViewData["Title"] = "ShowAll";
+}
+
+<h1>ShowAll</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Idtg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenTg)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idtg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenTg)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
