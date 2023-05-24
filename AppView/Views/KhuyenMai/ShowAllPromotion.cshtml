@@ -1,0 +1,65 @@
+﻿@model IEnumerable<AppData.Models.KhuyenMai>
+
+@{
+    ViewData["Title"] = "ShowAllPromotion";
+}
+
+<h1>ShowAllPromotion</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Idkm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaKm)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayBd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayKt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhanTramGiam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idkm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaKm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayBd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayKt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhanTramGiam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrangThai)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
