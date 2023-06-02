@@ -23,7 +23,7 @@ namespace AppData.Models
 
         public virtual Nxb? IdnxbNavigation { get; set; }
         public virtual SanPham? IdspNavigation { get; set; }
-        public virtual TacGium? IdtgNavigation { get; set; }
+        public virtual TacGia? IdtgNavigation { get; set; }
         public virtual ICollection<GioHangCt> GioHangCts { get; set; }
         public virtual ICollection<HoaDonCt> HoaDonCts { get; set; }
     }

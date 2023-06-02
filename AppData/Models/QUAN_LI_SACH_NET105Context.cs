@@ -27,14 +27,14 @@ namespace AppData.Models
         public virtual DbSet<Nxb> Nxbs { get; set; } = null!;
         public virtual DbSet<SanPham> SanPhams { get; set; } = null!;
         public virtual DbSet<SanPhamCt> SanPhamCts { get; set; } = null!;
-        public virtual DbSet<TacGium> TacGia { get; set; } = null!;
+        public virtual DbSet<TacGia> TacGia { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-RKUPNGD\SQLEXPRESS;Initial Catalog=QUAN_LI_SACH_NET105;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Data Source=NGOCSINH;Initial Catalog=QUAN_LI_SACH_NET105;Integrated Security=True");
             }
         }
 
@@ -386,7 +386,7 @@ namespace AppData.Models
                     .HasConstraintName("FK__SanPhamCT__IDTG__74AE54BC");
             });
 
-            modelBuilder.Entity<TacGium>(entity =>
+            modelBuilder.Entity<TacGia>(entity =>
             {
                 entity.HasKey(e => e.Idtg)
                     .HasName("PK__TacGia__B87C3A8F63E83118");

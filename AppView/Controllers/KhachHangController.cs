@@ -1,4 +1,6 @@
 ﻿using AppData.Models;
+using AppView.IServices;
+using AppView.Services;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -6,10 +8,7 @@ namespace AppView.Controllers
 {
     public class KhachHangController : Controller
     {
-        public KhachHangController()
-        {
-
-        }
+        
 
         public async Task<IActionResult> ShowAllKhachHang()
         {

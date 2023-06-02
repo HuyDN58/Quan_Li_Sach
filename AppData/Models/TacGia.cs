@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace AppData.Models
 {
-    public partial class TacGium
+    public partial class TacGia
     {
-        public TacGium()
+        public TacGia()
         {
             SanPhamCts = new HashSet<SanPhamCt>();
         }
