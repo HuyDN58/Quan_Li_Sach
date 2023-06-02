@@ -20,7 +20,7 @@ namespace AppView.Controllers
             string apiData = await response.Content.ReadAsStringAsync();
             // Lấy kqua trả về từ API dạng Json
             // Đọc từ string Json vừa thu được sang double
-            var colors = JsonConvert.DeserializeObject<List<TacGium>>(apiData);
+            var colors = JsonConvert.DeserializeObject<List<TacGia>>(apiData);
             return View(colors);
         }
     }

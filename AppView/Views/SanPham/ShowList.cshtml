@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<AppData.Models.SanPham>
 
 @{
-    ViewData["Title"] = "ShowAll";
+    ViewData["Title"] = "ShowList";
 }
 
-<h1>ShowAll</h1>
+<h1>ShowList</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -37,9 +37,9 @@
                 @Html.DisplayFor(modelItem => item.TenSp)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.Idsp  }) |
-                @Html.ActionLink("Details", "Details", new {  id=item.Idsp  }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.Idsp  })
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
 }

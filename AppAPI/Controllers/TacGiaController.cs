@@ -10,30 +10,30 @@ namespace AppAPI.Controllers
     [ApiController]
     public class TacGiaController : ControllerBase
     {
-        private IAllRepositories<TacGium> irepos;
+        private IAllRepositories<TacGia> irepos;
         private QUAN_LI_SACH_NET105Context context = new QUAN_LI_SACH_NET105Context();
         public TacGiaController()
         {
-            AllRepositories<TacGium> repos = new AllRepositories<TacGium>(context, context.TacGia);
+            AllRepositories<TacGia> repos = new AllRepositories<TacGia>(context, context.TacGia);
             irepos = repos;
         }
 
         [HttpGet]
-        public IEnumerable<TacGium> Get()
+        public IEnumerable<TacGia> Get()
         {
             return irepos.GetAll();
         }
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
-        public TacGium Get(Guid id)
+        public TacGia Get(Guid id)
         {
             return irepos.GetAll().First(c => c.Idtg == id);
         }
         [HttpPost("Create-mausac")]
         public bool CreateColor(string Matg, string Tentg)
         {
-            TacGium acc = new TacGium();
+            TacGia acc = new TacGia();
             acc.Matg = Matg; acc.TenTg = Tentg; acc.Idtg = Guid.NewGuid();
             return irepos.CreateItem(acc);
         }
