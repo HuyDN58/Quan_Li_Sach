@@ -53,5 +53,6 @@ namespace AppAPI.Controllers
             var acc = context.SanPhams.Find(id);
             return irepos.DeleteItem(acc);
         }
+        /**/
     }
 }
