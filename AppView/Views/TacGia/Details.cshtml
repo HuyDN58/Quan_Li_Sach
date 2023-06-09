@@ -1,4 +1,4 @@
-﻿@model AppData.Models.SanPham
+﻿@model AppData.Models.TacGia
 
 @{
     ViewData["Title"] = "Details";
@@ -7,30 +7,30 @@
 <h1>Details</h1>
 
 <div>
-    <h4>SanPham</h4>
+    <h4>TacGia</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Idsp)
+            @Html.DisplayNameFor(model => model.Idtg)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Idsp)
+            @Html.DisplayFor(model => model.Idtg)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaSp)
+            @Html.DisplayNameFor(model => model.Matg)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MaSp)
+            @Html.DisplayFor(model => model.Matg)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.TenSp)
+            @Html.DisplayNameFor(model => model.TenTg)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.TenSp)
+            @Html.DisplayFor(model => model.TenTg)
         </dd>
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Idsp }) |
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Idtg  }) |
     <a asp-action="Index">Back to List</a>
 </div>

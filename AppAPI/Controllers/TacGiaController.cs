@@ -30,7 +30,7 @@ namespace AppAPI.Controllers
         {
             return irepos.GetAll().First(c => c.Idtg == id);
         }
-        [HttpPost("Create-mausac")]
+        [HttpPost("Create")]
         public bool CreateColor(string Matg, string Tentg)
         {
             TacGia acc = new TacGia();

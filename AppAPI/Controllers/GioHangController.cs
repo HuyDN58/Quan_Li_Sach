@@ -31,7 +31,7 @@ namespace AppAPI.Controllers
         {
             return irepos.GetAll().First(c => c.Idgh == id);
         }
-        [HttpPost("Create-mausac")]
+        [HttpPost("Create")]
         public bool CreateColor(Guid khachhang)
         {
             GioHang gh = new GioHang();

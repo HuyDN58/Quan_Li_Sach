@@ -31,7 +31,7 @@ namespace AppAPI.Controllers
         {
             return irepos.GetAll().First(c => c.IdnguoiDung == id);
         }
-        [HttpPost("Create-mausac")]
+        [HttpPost("Create")]
         public bool CreateColor(string taiKhoan, string matKhau)
         {
             Account acc = new Account();

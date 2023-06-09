@@ -35,7 +35,7 @@ namespace AppAPI.Controllers
         {
             return irepos.GetAll().First(c => c.Idnxb == id);
         }
-        [HttpPost("Create-mausac")]
+        [HttpPost("Create")]
         public bool CreateColor(Guid id, string ma, string ten)
         {
             Nxb color = new Nxb();

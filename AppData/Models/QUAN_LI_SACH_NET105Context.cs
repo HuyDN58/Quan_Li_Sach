@@ -33,7 +33,7 @@ namespace AppData.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-HD7DTQA\SQLEXPRESS;Initial Catalog=QUAN_LI_SACH_NET105;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-RKUPNGD\SQLEXPRESS;Initial Catalog=QUAN_LI_SACH_NET105;Integrated Security=True");
             }
         }
 

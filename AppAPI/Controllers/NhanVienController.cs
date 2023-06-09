@@ -29,7 +29,7 @@ namespace AppAPI.Controllers
         {
             return irepos.GetAll().First(c => c.Idnv == id);
         }
-        [HttpPost("Create-mausac")]
+        [HttpPost("Create")]
 
 
         public bool Create(string MaNv, string TenNv,string Sdt, string DiaChi, Guid IDNguoiDung, int TrangThai)

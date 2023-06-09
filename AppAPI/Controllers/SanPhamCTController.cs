@@ -33,9 +33,10 @@ namespace AppAPI.Controllers
         public bool Create(int gianhap,int giaban, int sl,string mota,int trangthai,  Guid idtg, Guid idnxb,Guid idsp)
         {
             SanPhamCt acc = new SanPhamCt();
-            acc.Idsp = Guid.NewGuid(); acc.GiaNhap = gianhap; acc.GiaBan = giaban; acc.SoLuongTon = sl; 
-            acc.GiaBan = giaban; acc.Idtg = Guid.NewGuid();
-            acc.Idnxb = Guid.NewGuid(); acc.MoTa = mota; acc.TrangThai = trangthai;
+            acc.Idspct= Guid.NewGuid();
+            acc.Idsp = idsp; acc.GiaNhap = gianhap; acc.GiaBan = giaban; acc.SoLuongTon = sl; 
+            acc.GiaBan = giaban; acc.Idtg = idtg;
+            acc.Idnxb = idnxb; acc.MoTa = mota; acc.TrangThai = trangthai;
             return irepos.CreateItem(acc);
         }
 
@@ -45,9 +46,9 @@ namespace AppAPI.Controllers
         {
 
             var acc = irepos.GetAll().First(c => c.Idspct == id);
-            acc.Idsp = Guid.NewGuid(); acc.GiaNhap = gianhap; acc.GiaBan = giaban; acc.SoLuongTon = sl;
-            acc.GiaBan = giaban; acc.Idtg = Guid.NewGuid();
-            acc.Idnxb = Guid.NewGuid(); acc.MoTa = mota; acc.TrangThai = trangthai;
+            acc.Idsp = idsp; acc.GiaNhap = gianhap; acc.GiaBan = giaban; acc.SoLuongTon = sl;
+            acc.GiaBan = giaban; acc.Idtg = idtg;
+            acc.Idnxb = idnxb; acc.MoTa = mota; acc.TrangThai = trangthai;
             return irepos.UpdateItem(acc);
         }
 

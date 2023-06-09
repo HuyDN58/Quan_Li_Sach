@@ -29,7 +29,7 @@ namespace AppAPI.Controllers
         {
             return irepos.GetAll().First(c => c.Idkh == id);
         }
-        [HttpPost("Create-mausac")]
+        [HttpPost("Create")]
         public bool CreateColor(string ma, string tenkh, Guid idacc, string sdt, string diachi, int trangthai)
         {
             KhachHang kh = new KhachHang();
