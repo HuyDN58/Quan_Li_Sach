@@ -1,4 +1,6 @@
-﻿using AppData.Models;
+﻿using AppData.IRepositories;
+using AppData.Models;
+using AppData.Repositories;
 using AppView.IServices;
 using AppView.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -9,6 +11,13 @@ namespace AppView.Controllers
 {
     public class AccountController : Controller
     {
+        private IAllRepositories<Account> irepos;
+        private QUAN_LI_SACH_NET105Context context = new QUAN_LI_SACH_NET105Context();
+        public AccountController()
+        {
+            AllRepositories<Account> repos = new AllRepositories<Account>(context, context.Accounts);
+            irepos = repos;
+        }
 
         private readonly ILogger<AccountController> _logger;
         public AccountController(ILogger<AccountController> logger)
@@ -101,7 +110,15 @@ namespace AppView.Controllers
             var accs = JsonConvert.DeserializeObject<List<Account>>(apiData);
             return View(accs);
         }
-        
-
+        public ActionResult DangNhap()
+        {
+            return View();
+        }
+        public ActionResult DangNhapHeThong(string tk, string mk)
+        {
+            
+            
+            return View();
+        }
     }
 }
