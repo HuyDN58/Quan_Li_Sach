@@ -1,0 +1,43 @@
+﻿@model AppData.Models.Nxb
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Nxb</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Idnxb" class="control-label"></label>
+                <input asp-for="Idnxb" class="form-control" />
+                <span asp-validation-for="Idnxb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mansx" class="control-label"></label>
+                <input asp-for="Mansx" class="form-control" />
+                <span asp-validation-for="Mansx" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenNxb" class="control-label"></label>
+                <input asp-for="TenNxb" class="form-control" />
+                <span asp-validation-for="TenNxb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ShowAll">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

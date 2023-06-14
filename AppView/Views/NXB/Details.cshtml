@@ -1,0 +1,36 @@
+﻿@model AppData.Models.Nxb
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nxb</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Idnxb)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Idnxb)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Mansx)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mansx)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TenNxb)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TenNxb)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.Idnxb  }) |
+    <a asp-action="Index">Back to List</a>
+</div>
