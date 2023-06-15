@@ -17,60 +17,52 @@
                     <div class="lang_text">Languages:</div>
                     <a href="#" class="lang"><img src="~/images/en.gif" alt="" border="0" /></a> <a href="#" class="lang"><img src="~/images/de.gif" alt="" border="0" /></a>
                 </div>
-                <div class="big_banner"> <a href="#"><img src="~/images/banner728.jpg" alt="" border="0" /></a> </div>
-            </div>
+                @*<div class="big_banner"> <a href="#"><img src="~/images/header_bg.jpg" alt="" border="0" /></a> </div>
+            </div>*@
             <div id="logo"> <a href="#"><img src="~/images/logo.png" alt="" border="0" width="182" height="85" /></a> </div>
         </div>
         <div id="main_content">
             <div id="menu_tab">
                 <ul class="menu">
-                    <li><a href="#" class="nav"> Home </a></li>
+                    <li><a href="#" class="nav"> Trang Chủ </a></li>
                     <li class="divider"></li>
-                    <li><a href="#" class="nav">Products</a></li>
+                    <li><a href="#" class="nav">Sản Phẩm</a></li>
                     <li class="divider"></li>
-                    <li><a href="#" class="nav">Specials</a></li>
+                    <li><a href="#" class="nav">Tài Khoản</a></li>
                     <li class="divider"></li>
-                    <li><a href="#" class="nav">My account</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#" class="nav">Sign Up</a></li>
+                    <li><a href="#" class="nav">Đăng nhập</a></li>
                     <li class="divider"></li>
                     <li><a href="#" class="nav">Shipping </a></li>
                     <li class="divider"></li>
-                    <li><a href="contact.html" class="nav">Contact Us</a></li>
+                    <li><a href="contact.html" class="nav">Liên Hệ</a></li>
                     <li class="divider"></li>
-                    <li><a href="details.html" class="nav">Details</a></li>
+                    <li><a asp-controller="SanPhamCT" asp-action="ShowAllSp" class="nav">Details</a></li>
                 </ul>
             </div>
             <!-- end of menu tab -->
-            <div class="crumb_navigation"> Navigation: <span class="current">Home</span> </div>
+            @*<div class="crumb_navigation"> Navigation: <span class="current">Home</span> </div>*@
             <div class="left_content">
-                <div class="title_box">Categories</div>
+                <div class="title_box">Tác Giả</div>
                 <ul class="left_menu">
-                    <li class="odd"><a href="#">Power Tools</a></li>
-                    <li class="even"><a href="#">Air Tools</a></li>
-                    <li class="odd"><a href="#">Hand Tools</a></li>
-                    <li class="even"><a href="#">Accessories</a></li>
-                    <li class="odd"><a href="#">Workwear</a></li>
-                    <li class="even"><a href="#">Spare Parts</a></li>
-                    <li class="odd"><a href="#">Power Tools</a></li>
-                    <li class="even"><a href="#">Air Tools</a></li>
-                    <li class="odd"><a href="#">Hand Tools</a></li>
-                    <li class="even"><a href="#">Accessories</a></li>
-                    <li class="odd"><a href="#">Workwear</a></li>
-                    <li class="even"><a href="#">Spare Parts</a></li>
+                    <li class="odd"><a href="#">Nguyễn Nhật Ánh</a></li>
+                    <li class="even"><a href="#">Trang Hạ</a></li>
+                    <li class="odd"><a href="#">Nguyễn Phong Việt</a></li>
+                    <li class="even"><a href="#">Anh Khang</a></li>
+                    <li class="odd"><a href="#">Nguyễn Ngọc Thạch</a></li>
+                    <li class="even"><a href="#">Hamlet Trương</a></li>
                 </ul>
-                <div class="title_box">Special Products</div>
+                <div class="title_box">ĐẶC BIỆT</div>
                 <div class="border_box">
-                    <div class="product_title"><a href="#">Makita 156 MX-VL</a></div>
-                    <div class="product_img"><a href="#"><img src="~/images/p1.jpg" alt="" border="0" /></a></div>
-                    <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+                    <div class="product_title"><a href="#">Đắc nhân tâm</a></div>
+                    <div class="product_img"><a href="#"><img src="~/images/sach1.jpg" width="140" height="150" alt="" border="0" /></a></div>
+                    <div class="prod_price"><span class="reduce">70$</span> <span class="price">40$</span></div>
                 </div>
-                <div class="title_box">Newsletter</div>
+                <div class="title_box">Bản tin</div>
                 <div class="border_box">
                     <input type="text" name="newsletter" class="newsletter_input" value="your email" />
                     <a href="#" class="join">subscribe</a>
                 </div>
-                <div class="banner_adds"> <a href="#"><img src="~/images/bann2.jpg" alt="" border="0" /></a> </div>
+                <div class="banner_adds"> <a href="#"><img src="~/images/sach5.jpg" alt="" width="170" height="170" border="0" /></a> </div>
             </div>
             <!-- end of left content -->
             <div class="center_content">
@@ -85,31 +77,29 @@
                     <a href="#" class="join">search</a>
                 </div>
                 <div class="shopping_cart">
-                    <div class="title_box">Shopping cart</div>
+                    <div class="title_box">Giỏ hàng</div>
                     <div class="cart_details">
                         3 items <br />
                         <span class="border_cart"></span> Total: <span class="price">350$</span>
                     </div>
                     <div class="cart_icon"><a href="#"><img src="~/images/shoppingcart.png" alt="" width="35" height="35" border="0" /></a></div>
                 </div>
-                <div class="title_box">What’s new</div>
+                <div class="title_box">Hàng mới</div>
                 <div class="border_box">
-                    <div class="product_title"><a href="#">Motorola 156 MX-VL</a></div>
-                    <div class="product_img"><a href="#"><img src="~/images/p2.jpg" alt="" border="0" /></a></div>
-                    <div class="prod_price"><span class="reduce">350$</span> <span class="price">270$</span></div>
+                    <div class="product_title"><a href="#">The One Think</a></div>
+                    <div class="product_img"><a href="#"><img src="~/images/Sach2.gif" alt="" width="120" height="150" border="0" /></a></div>
+                    <div class="prod_price"><span class="reduce">50$</span> <span class="price">30$</span></div>
                 </div>
-                <div class="title_box">Manufacturers</div>
+                <div class="title_box">Nhà Xuất Bản</div>
                 <ul class="left_menu">
-                    <li class="odd"><a href="#">Bosch</a></li>
-                    <li class="even"><a href="#">Samsung</a></li>
-                    <li class="odd"><a href="#">Makita</a></li>
-                    <li class="even"><a href="#">LG</a></li>
-                    <li class="odd"><a href="#">Fujitsu Siemens</a></li>
-                    <li class="even"><a href="#">Motorola</a></li>
-                    <li class="odd"><a href="#">Phillips</a></li>
-                    <li class="even"><a href="#">Beko</a></li>
+                    <li class="odd"><a href="#">Nhà xuất bản Trẻ</a></li>
+                    <li class="even"><a href="#">Nhà xuất bản Kim Đồng</a></li>
+                    <li class="odd"><a href="#">Nhà xuất bản Phụ nữ</a></li>
+                    <li class="even"><a href="#">Nhà xuất bản Lao Động</a></li>
+                    <li class="odd"><a href="#">Nhà xuất bản tư nhân Nhã Nam</a></li>
+                    <li class="even"><a href="#">Nhà xuất bản Hội Nhà văn Việt</a></li>
                 </ul>
-                <div class="banner_adds"> <a href="#"><img src="~/images/bann1.jpg" alt="" border="0" /></a> </div>
+                <div class="banner_adds"> <a href="#"><img src="~/images/sach4.jpg" alt="" border="0" width="110" height="180" /></a> </div>
             </div>
             <!-- end of right content -->
         </div>
